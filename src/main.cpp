@@ -33,7 +33,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x00000b45244a0653b7cb75ce50905389f37b54bbd1ab3a394b3128dd4ef57ead");
+uint256 hashGenesisBlock("0x");
 
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // TrumpCoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
@@ -3144,7 +3144,7 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x3f66108684400d84e2ffb528360d534fa19ecaf47c7c4c2ca1d1352ec4a351ad"));
+        assert(block.hashMerkleRoot == uint256("0x"));
         block.print();
         assert(hash == hashGenesisBlock);
 
